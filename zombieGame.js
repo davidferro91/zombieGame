@@ -18,7 +18,6 @@ var inquirer = require("inquirer");
 
 var humanHealth = Math.floor(Math.random() * 50) + 1;
 var zombieHealth = Math.floor(Math.random() * 25) + 1;
-var gameRunning = 1;
 
 function zombieAttack (num) {
     var zombieNum = Math.floor(Math.random() * 5) + 1;
@@ -28,17 +27,23 @@ function zombieAttack (num) {
         console.log("You hit the zombie for " + zombieDam + " damage!  Keep going!");
         zombieHealth = zombieHealth - zombieDam;
         console.log("You have " + humanHealth + " health left.  The zombie has " + zombieHealth + " left.");
+        console.log("");
+        console.log("=========================================================");
+        console.log("");
     } else {
         var humDam = Math.floor(Math.random() * 5) + 1;
         console.log("OH NO!!!! The zombie bitch-slapped you for " + humDam + " damage!");
         humanHealth = humanHealth - humDam;
         console.log("You have " + humanHealth + " health left.  The zombie has " + zombieHealth + " left.");
+        console.log("");
+        console.log("=========================================================");
+        console.log("");
     }
 }
 
 function gameFunction() {
      
-    if (humanHealth > 0) {
+    if (humanHealth > 0 && zombieHealth > 0) {
         inquirer.prompt([
         {
             type: "input",
@@ -50,17 +55,12 @@ function gameFunction() {
         zombieAttack(number);
         gameFunction();
         });
-        if (zombieHealth < 1) {
-            console.log("You killed the zombie!");
-            gameRunning = 0;
-            return;
-        }
         
-    } else {
+    } else if (humanHealth < 1) {
         console.log("The zombie killed you!  GAME OVER");
-        gameRunning = 0;
+    } else if (zombieHealth < 1) {
+        console.log("You killed the zombie!  You stay alive another day!");
     }
 }
-
 
 gameFunction();
