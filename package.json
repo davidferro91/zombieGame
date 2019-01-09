@@ -1,0 +1,22 @@
+{
+  "name": "zombiegame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zombieGame.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidferro91/zombieGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidferro91/zombieGame/issues"
+  },
+  "homepage": "https://github.com/davidferro91/zombieGame#readme",
+  "dependencies": {
+    "inquirer": "^6.2.1"
+  }
+}
