@@ -26,7 +26,7 @@ function zombieAttack (num) {
         var zombieDam = Math.floor(Math.random() * 5) + 1;
         console.log("You hit the zombie for " + zombieDam + " damage!  Keep going!");
         zombieHealth = zombieHealth - zombieDam;
-        console.log("You have " + humanHealth + " health left.  The zombie has " + zombieHealth + " left.");
+        console.log("You have " + humanHealth + " health left.  The zombie has " + zombieHealth + " health left.");
         console.log("");
         console.log("=========================================================");
         console.log("");
@@ -34,7 +34,7 @@ function zombieAttack (num) {
         var humDam = Math.floor(Math.random() * 5) + 1;
         console.log("OH NO!!!! The zombie bitch-slapped you for " + humDam + " damage!");
         humanHealth = humanHealth - humDam;
-        console.log("You have " + humanHealth + " health left.  The zombie has " + zombieHealth + " left.");
+        console.log("You have " + humanHealth + " health left.  The zombie has " + zombieHealth + " health left.");
         console.log("");
         console.log("=========================================================");
         console.log("");
@@ -59,7 +59,7 @@ function gameFunction() {
     } else if (humanHealth < 1) {
         console.log("The zombie killed you!  GAME OVER");
     } else if (zombieHealth < 1) {
-        console.log("You killed the zombie!  You stay alive another day!");
+        console.log("You killed the zombie!  You survived another day!");
     }
 }
 
